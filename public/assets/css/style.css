@@ -1,0 +1,44 @@
+/* Overrid Bootstrap css */
+
+.bg-light {
+    background-color: #02aadd!important;
+}
+
+
+
+.margin-top-20{
+    margin-top: 20px;
+}
+
+.feature-img{
+    max-width: 200px;
+}
+.footer-bottom{
+    background-color: #02aadd;
+    padding: 20px;
+    margin-top: 20px;
+}
+.product-item{
+    background-color: #96b2ba;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    border: none;
+    background: none;
+}
