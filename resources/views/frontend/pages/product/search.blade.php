@@ -12,10 +12,10 @@
       </div>
       <div class="col-md-8">
           <div class="widget">
-              <h3>All Products</h3>
-              @if (Session::has('message'))
-                  {{ Session::get('message') }}
-              @endif
+              <h3>Search Products for -
+                    <span class="badge badge-primary">{{ $search }}</span>
+              </h3>
+              
                 
              @include('frontend.pages.product.partials.all_product')
           </div>

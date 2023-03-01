@@ -10,7 +10,9 @@
     @include('frontend.partials.styles')
 
 
-    <title>Laravel Ecommerce</title>
+    <title>
+          @yield('title','Laravel Ecommerce Project')
+    </title>
   </head>
   <body>
     <div class="wrapper">

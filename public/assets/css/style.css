@@ -4,7 +4,14 @@
     background-color: #02aadd!important;
 }
 
-
+.childs-row{
+    padding-left: 20px;
+    background: #fff;
+    border-left: 1px solid #dfdfdf;
+}
+.childs-row a.list-group-item{
+    border-left:  0px;
+}
 
 .margin-top-20{
     margin-top: 20px;

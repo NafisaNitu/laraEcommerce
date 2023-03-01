@@ -31,12 +31,9 @@
               <a class="nav-link disabled" href="#">Disabled</a>
             </li> --}}
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            {{-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> --}}
-
+          <form class="form-inline my-2 my-lg-0" action="{{ route('search') }}" method="get">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search products" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" name="search" placeholder="Search products" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>

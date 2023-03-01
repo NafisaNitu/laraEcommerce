@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[PagesController::class,'index'])->name('index');
 Route::get('/contact', [PagesController::class,'contact'])->name('contact');
+Route::get('/serach',[PagesController::class, 'search'])->name('search');
 
 
 /*

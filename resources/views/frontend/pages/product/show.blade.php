@@ -1,5 +1,8 @@
 @extends('frontend.layouts.master')
 
+@section('title')
+      {{ $product->title }} | Laravel Ecommerce Site
+@endsection
 
 @section('content')
 
@@ -22,7 +25,7 @@
                   </div>
                 @endforeach
                   @php
-                      $i++; data-autoplay="true"
+                      $i++;
                   @endphp
               
             </div>
@@ -42,6 +45,15 @@
       <div class="col-md-8">
           <div class="widget">
               <h3>{{ $product->title }}</h3>
+              <h3>{{ $product->price }} Taka <span class="badge badge-primary">
+                {{ $product->quantity < 1 ? 'No Item is Available' : $product->quantity. ' Item in stack' }}
+              </span>
+            </h3>
+              <hr>
+
+              <div class="product-description">
+                {{ $product->description }}
+              </div>
 
           </div>
       </div>
