@@ -25,7 +25,26 @@
                         <label for="title">Quantity</label>
                         <input type="number" name="quantity" class="form-control" id="quantity"  placeholder="Quantity">
                       </div>
+                      <div class="form-group">
+                        <select name="category_id" id="" class="form-control">
+                          <option value="">Select Category for the Product</option>
+                            @foreach (App\Models\Category::orderBy('name','desc')->where('parent_id',NULL)->get() as $parent)
+                            <option value="{{ $parent->id }}">{{ $parent->name }}</option>
 
+                            @foreach (App\Models\Category::orderBy('name','asc')->where('parent_id',$parent->id)->get() as $child)
+                                <option value="{{ $child->id }}">------->{{ $child->name }}</option>
+                            @endforeach
+                            @endforeach
+                        </select>
+                      </div>  
+                      <div class="form-group">
+                        <select name="category_id" id="" class="form-control">
+                          <option value="">Select Brand for the Product</option>
+                            @foreach (App\Models\Brand::orderBy('name','desc')->get() as $brand)
+                            <option value="{{ $brand->id }}">{{ $brand->name }}</option>
+                            @endforeach
+                        </select>
+                      </div>  
                       <label for="product_image">Image</label>
                       <div class="row">
                           <div class="col-md-4">
