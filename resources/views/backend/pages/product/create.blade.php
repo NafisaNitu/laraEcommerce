@@ -36,15 +36,17 @@
                             @endforeach
                             @endforeach
                         </select>
-                      </div>  
+                      </div> 
+                
                       <div class="form-group">
-                        <select name="category_id" id="" class="form-control">
+                        <select name="brand_id" id="" class="form-control">
                           <option value="">Select Brand for the Product</option>
                             @foreach (App\Models\Brand::orderBy('name','desc')->get() as $brand)
                             <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                             @endforeach
                         </select>
                       </div>  
+
                       <label for="product_image">Image</label>
                       <div class="row">
                           <div class="col-md-4">

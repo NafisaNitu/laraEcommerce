@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Frontend\PagesController;
 use App\Http\Controllers\Frontend\ProductsController;
+use App\Http\Controllers\Frontend\CategoriesController;
 use App\Http\Controllers\Backend\AdminPagesController;
 use App\Http\Controllers\Backend\AdminProductController;
 use App\Http\Controllers\Backend\CategoryController;
@@ -31,15 +32,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[PagesController::class,'index'])->name('index');
 Route::get('/contact', [PagesController::class,'contact'])->name('contact');
-Route::get('/serach',[PagesController::class, 'search'])->name('search');
 
 
 /*
 Product Router
 All the routers for our products for frontend
 */
-Route::get('/products', [ProductsController::class,'index'])->name('products');
-Route::get('/products/{slug}',[ProductsController::class, 'show'])->name('products.show');
+
+Route::group(['prefix' => 'products'],function(){
+    Route::get('/', [ProductsController::class,'index'])->name('products');
+    Route::get('/{slug}',[ProductsController::class, 'show'])->name('products.show');
+    Route::get('/serach',[PagesController::class, 'search'])->name('search');
+    Route::get('/categories',[CategoriesController::class,'index'])->name('categories.index');
+    Route::get('/category/{id}',[CategoriesController::class,'show'])->name('categories.show');
+});
+
 
 
 
